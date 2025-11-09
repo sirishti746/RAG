@@ -74,16 +74,15 @@ def get_response(retriever, query: str):
 # -------------------------------
 def list_documents():
     return [
-        folder.replace("chroma_db_", "")
+        folder.replace("chroma_db_","")
         for folder in os.listdir(".")
         if folder.startswith("chroma_db_")
-    ]
-
+        ]
 # -------------------------------
 # Streamlit App UI
 # -------------------------------
 st.set_page_config(page_title="RAG Project")
-st.title("RAG Project")
+st.title("RAG Chatbot Project")
 
 # Session state setup
 if "db" not in st.session_state:
